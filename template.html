@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>合同模板</title>
+</head>
+<body>
+        <header>
+            <div class="container header-container"> 
+                <div class="logo">
+                    <a href="index.html">
+                        <!-- 您的Logo图片 -->
+                        <img src="./img/logo.jpg" alt="LegalEase Logo">
+                    </a>
+                </div>
+               <nav class="main-navigation">
+                   <ul>
+                       <li><a href="index.html">Home</a></li>
+                       <li><a href="question and answer.html">Q&A</a></li>
+                       <li><a href="template.html">Templates</a></li>
+                       <li><a href="working principle.html">How It Works</a></li>
+                       <li><a href="#">Sign In</a></li>
+                   </ul>
+               </nav>
+               <div class="header-search-area">
+               </div>
+               </div>
+               </header>
+               
+               <div class="container">
+                   <main>
+                       <h1><i class="fas fa-folder-open icon-interactive"></i> Browse Contract Templates</h1>
+                       <div class="template-controls">
+                           <div class="search-bar-container">
+                               <label for="search-templates" class="sr-only">Search Templates</label>
+                               <input type="search" id="search-templates-input" name="search-templates" placeholder="Search by title, e.g. 'Employment Agreement'...">
+                               <button id="search-templates-btn" class="button-style search-btn"><i class="fas fa-search"></i></button>
+                           </div>
+                       </div>
+               
+                       <nav id="template-categories">
+                           <h3>Categories:</h3>
+                           <a href="#" data-category="all" class="category-link active">All Templates</a>
+                           <a href="#" data-category="employment" class="category-link">Employment</a>
+                           <a href="#" data-category="rental" class="category-link">Rental</a>
+                           <a href="#" data-category="partnership" class="category-link">Partnership</a>
+                           <a href="#" data-category="nda" class="category-link">NDA</a>
+                           <a href="#" data-category="procurement" class="category-link">Procurement</a>
+                           <a href="#" data-category="service" class="category-link">Service</a>
+                       </nav>
+               
+                       <section id="template-cards">
+                           <article class="template-card" data-category="employment">
+                               <i class="fas fa-file-contract fa-2x card-icon icon-interactive"></i>
+                               <h3 class="template-title">Employment Agreement</h3>
+                               <p class="template-description">Standard agreement for full-time employee onboarding, clarifying rights and obligations.</p>
+                               <button type="button" class="cta-button fill-template-btn">[Use This Template]</button>
+                           </article>
+                           <article class="template-card" data-category="rental">
+                               <i class="fas fa-home fa-2x card-icon icon-interactive"></i>
+                               <h3 class="template-title">Residential Lease Agreement</h3>
+                               <p class="template-description">Standard housing rental contract covering key terms like rent, deposit, and lease period.</p>
+                               <button type="button" class="cta-button fill-template-btn">[Use This Template]</button>
+                           </article>
+                           <article class="template-card" data-category="nda">
+                               <i class="fas fa-user-secret fa-2x card-icon icon-interactive"></i>
+                               <h3 class="template-title">Non-Disclosure Agreement (NDA)</h3>
+                               <p class="template-description">Protects sensitive business information for partnership discussions, employee confidentiality, etc.</p>
+                               <button type="button" class="cta-button fill-template-btn">[Use This Template]</button>
+                           </article>
+                           <article class="template-card" data-category="partnership">
+                               <i class="fas fa-users fa-2x card-icon icon-interactive"></i>
+                               <h3 class="template-title">Partnership Agreement</h3>
+                               <p class="template-description">Establishes partnership terms including capital contributions, profit sharing, and responsibilities.</p>
+                               <button type="button" class="cta-button fill-template-btn">[Use This Template]</button>
+                           </article>
+                           <article class="template-card" data-category="procurement">
+                               <i class="fas fa-shopping-cart fa-2x card-icon icon-interactive"></i>
+                               <h3 class="template-title">Procurement Contract</h3>
+                               <p class="template-description">Defines rights and obligations for goods or services procurement between buyers and sellers.</p>
+                               <button type="button" class="cta-button fill-template-btn">[Use This Template]</button>
+                           </article>
+                           <article class="template-card" data-category="service">
+                               <i class="fas fa-handshake fa-2x card-icon icon-interactive"></i>
+                               <h3 class="template-title">Service Agreement</h3>
+                               <p class="template-description">Specifies service content, standards, and fees between providers and clients.</p>
+                               <button type="button" class="cta-button fill-template-btn">[Use This Template]</button>
+                           </article>
+                           <article class="template-card" data-category="employment">
+                               <i class="fas fa-briefcase fa-2x card-icon icon-interactive"></i>
+                               <h3 class="template-title">Standard Labor Contract</h3>
+                               <p class="template-description">Standardized employment contract suitable for most labor relationships.</p>
+                               <button type="button" class="cta-button fill-template-btn">[Use This Template]</button>
+                           </article>
+                           <article class="template-card" data-category="rental">
+                               <i class="fas fa-store fa-2x card-icon icon-interactive"></i>
+                               <h3 class="template-title">Commercial Lease Agreement</h3>
+                               <p class="template-description">For retail space rentals, including specific commercial terms.</p>
+                               <button type="button" class="cta-button fill-template-btn">[Use This Template]</button>
+                           </article>
+                           <article class="template-card" data-category="rental">
+                               <i class="fas fa-store fa-2x card-icon icon-interactive"></i>
+                               <h3 class="template-title">Commercial Lease Agreement</h3>
+                               <p class="template-description">For retail space rentals, including specific commercial terms.</p>
+                               <button type="button" class="cta-button fill-template-btn">[Use This Template]</button>
+                           </article>
+                       </section>
+               
+                       <!-- Dynamic Form -->
+                       <section id="template-fill-area" class="template-fill-area-hidden">
+                           <h3 id="fill-area-title">Filling: <span id="filling-template-name"></span></h3>
+                           <div id="fill-form-container">
+                               <!-- Dynamic content will be inserted here -->
+                           </div>
+                           <button id="submit-filled-template-btn" class="button-style">[Submit]</button>
+                           <button id="cancel-fill-template-btn" class="button-style secondary-btn">[Cancel]</button>
+                       </section>
+               
+                       <div class="message-below" style="margin-top: 30px;">
+                           <p><i class="fas fa-check-circle"></i> All templates have been reviewed by legal professionals and are AI-assisted to ensure professionalism and convenience.</p>
+                       </div>
+                   </main>
+               </div>
+               
+               <footer>
+                   <div class="container">
+                       <p><a href="#">About Us</a> | <a href="#">Contact</a> | <a href="#">Terms</a> | © LegalEase 2025</p>
+                   </div>
+               </footer>
+               
+               <!-- Success Notification -->
+               <div id="success-modal" class="modal">
+                   <div class="modal-content" style="max-width: 400px; text-align: center;">
+                       <span class="close-btn success-modal-close">×</span>
+                       <i class="fas fa-check-circle fa-3x" style="color: #28a745; margin-bottom: 15px;"></i>
+                       <h2>Success!</h2>
+                       <p>Your template has been submitted.</p>
+                       <button class="button-style success-modal-close">[Close]</button>
+                   </div>
+               </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

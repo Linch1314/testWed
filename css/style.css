@@ -1,0 +1,880 @@
+/* Global Resets and Base Styles - New Style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* New Body Font */
+    line-height: 1.7;
+    color: #333333; /* Dark Gray Text */
+    background-color: #FDFEFE; /* Off-White Background */
+    font-size: 16px; /* Base font size */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px; /* Slightly narrower for a more focused feel */
+    margin: 40px auto;
+    padding: 25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* New Heading Font */
+    color: #008080; /* Dark Teal */
+    margin-bottom: 0.75em;
+    font-weight: 700; /* Playfair Display often looks better bolder */
+    line-height: 1.3;
+}
+
+h1 { font-size: 2.8em; letter-spacing: -1px; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.6em; }
+
+p {
+    margin-bottom: 1.2em;
+    color: #555555; /* Slightly lighter than main text */
+}
+
+a {
+    color: #008080; /* Dark Teal for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFD700; /* Gold on hover */
+    text-decoration: none; /* Remove underline, rely on color change */
+}
+
+button, .button-style {
+    display: inline-block;
+    background-color: #FFD700; /* Gold Accent */
+    color: #333333; /* Dark text on gold for contrast */
+    padding: 12px 28px;
+    border: 2px solid #FFD700; /* Gold border */
+    border-radius: 4px; /* Subtle rounded corners */
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+button:hover, .button-style:hover {
+    background-color: #008080; /* Dark Teal on hover */
+    color: white;
+    border-color: #006666; /* Darker Teal border */
+    transform: translateY(-1px);
+}
+
+/* Header & Navigation - New Style */
+header {
+    background-color: #FDFEFE; /* Off-white to blend with body */
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0; /* Subtle separator */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0; margin-bottom: 0; /* Remove container margins for header */
+    padding-top: 0; padding-bottom: 0;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: #008080; /* Dark Teal */
+}
+.logo a { color: #008080; }
+.logo a:hover { color: #FFD700; }
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #333333;
+    font-weight: 500;
+    font-size: 0.95em;
+    padding: 8px 0;
+    position: relative;
+}
+nav ul li a::after { /* Underline effect for active/hover */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #FFD700; /* Gold */
+    transition: width 0.3s ease;
+}
+nav ul li a:hover::after, nav ul li a.active::after {
+    width: 100%;
+}
+nav ul li a.active {
+    color: #008080; /* Teal for active link */
+}
+
+/* Footer - New Style */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #2F4F4F; /* Dark Slate Gray - a bit muted from Teal */
+    color: #cccccc; /* Light gray text */
+    margin-top: 50px;
+}
+
+footer a {
+    color: #FFD700; /* Gold links in footer */
+    margin: 0 12px;
+}
+footer a:hover {
+    color: #ffffff;
+}
+footer p { color: #cccccc; }
+
+
+/* Hero Banner (index.html) - New Style */
+#hero-banner {
+    background-color: #e6f2f2; /* Very Light Teal */
+    color: #008080; /* Dark Teal text */
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 40px;
+}
+#hero-banner h1 {
+    color: #008080; /* Dark Teal */
+    font-size: 3.5em; /* Larger heading */
+}
+#hero-banner p {
+    font-size: 1.3em;
+    margin-bottom: 2em;
+    color: #333; /* Darker for readability */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Core Features (index.html) - New Style */
+#core-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    text-align: left; /* Align text to left within feature item */
+    margin-bottom: 40px;
+}
+.feature-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 128, 128, 0.1); /* Teal shadow */
+}
+.feature-item i { /* Icon Styling */
+    font-size: 2.2em;
+    color: #008080; /* Dark Teal */
+    margin-bottom: 18px;
+    display: block; /* Make icon block for better spacing */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.feature-item:hover i.icon-interactive { /* New class for icon interaction */
+    color: #FFD700; /* Gold on hover */
+    transform: translateY(-3px) scale(1.05);
+}
+.feature-item h3 {
+    font-size: 1.4em;
+    color: #008080;
+    margin-bottom: 0.5em;
+}
+
+/* Quote Section - New Style */
+#quote-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #008080; /* Dark Teal background */
+    border-radius: 6px;
+    margin-bottom: 40px;
+}
+#quote-section blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-style: italic;
+    color: #ffffff; /* White text */
+    margin: 0;
+}
+#quote-section blockquote p {
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Form Styling (General) - New Style */
+form div {
+    margin-bottom: 25px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600; /* Bolder labels */
+    color: #008080; /* Dark Teal */
+    font-size: 0.95em;
+}
+input[type="text"],
+input[type="search"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 14px; /* More padding */
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fdfdfd;
+}
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #FFD700; /* Gold border on focus */
+    box-shadow: 0 0 0 0.15rem rgba(255, 215, 0, 0.3); /* Gold glow */
+    outline: none;
+}
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Q&A Page Specific - New Style */
+#response-area {
+    margin-top: 35px;
+    padding: 25px;
+    background-color: #e6f2f2; /* Very Light Teal */
+    border-left: 4px solid #FFD700; /* Gold accent line */
+    border-radius: 0 4px 4px 0;
+}
+#response-area h2 { margin-bottom: 15px; }
+#response-area .ai-bubble {
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 5px;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+#response-area .ai-bubble strong { color: #008080; }
+
+
+/* Template Page Specific - New Style */
+#template-categories {
+    margin-bottom: 35px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center; /* Center categories */
+}
+#template-categories h3 {
+    display: block; /* Stack title above links */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+#template-categories a {
+    margin: 0 8px 8px 8px; /* Add bottom margin for wrapping */
+    padding: 8px 18px;
+    background-color: #f0f0f0;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.9em;
+    color: #555;
+    border: 1px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+#template-categories a:hover, #template-categories a.active {
+    background-color: #008080; /* Dark Teal */
+    color: white;
+    text-decoration: none;
+    border-color: #006666;
+}
+
+#template-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Consistent card width */
+    gap: 30px;
+    margin-bottom: 25px;
+}
+.template-card {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc; /* Slightly darker border */
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.template-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 128, 128, 0.12); /* Teal shadow */
+}
+.template-card .card-icon { /* For icon inside card */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #008080; /* Teal */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.template-card:hover .card-icon.icon-interactive {
+    color: #FFD700; /* Gold */
+    transform: scale(1.1);
+}
+.template-card h3 {
+    font-size: 1.3em;
+    color: #008080; /* Teal */
+    margin-bottom: 0.5em;
+}
+.template-card p {
+    font-size: 0.95em;
+    flex-grow: 1;
+    color: #666;
+    margin-bottom: 1em;
+}
+.template-card .cta-button {
+    align-self: flex-start;
+    padding: 10px 20px; /* Smaller button for cards */
+    font-size: 0.9em;
+}
+.message-below {
+    text-align: center;
+    padding: 20px;
+    background-color: #e6f2f2; /* Light Teal */
+    border-radius: 4px;
+    font-style: normal;
+    color: #008080; /* Teal text */
+    font-size: 0.95em;
+}
+.message-below i { margin-right: 8px; color: #008080; }
+
+
+/* How It Works & Pricing Page Specific - New Style */
+#how-it-works ol {
+    list-style-type: none;
+    counter-reset: step-counter;
+    padding-left: 0;
+}
+#how-it-works li {
+    counter-increment: step-counter;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 5px solid #008080; /* Teal accent line for steps */
+    border-radius: 0 5px 5px 0;
+    position: relative;
+    padding-left: 60px; /* Space for counter */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+}
+#how-it-works li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: -1px; /* Align with border */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #008080; /* Teal */
+    color: white;
+    width: 40px; /* Larger counter */
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    border: 2px solid #FDFEFE; /* Border to pop it from the line */
+}
+#how-it-works li strong { color: #008080; }
+
+#pricing {
+    margin-top: 45px;
+}
+#pricing .pricing-section {
+    margin-bottom: 35px;
+    padding: 30px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    background-color: #fff;
+}
+#pricing .pricing-section h3 {
+    color: #008080; /* Teal */
+    border-bottom: 2px solid #FFD700; /* Gold accent */
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+#pricing .pricing-section h3 i { margin-right: 10px; }
+#pricing ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+#pricing ul li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 0.95em;
+}
+#pricing ul li::before {
+    content: "\f00c"; /* Font Awesome check icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #008080; /* Teal for check */
+    position: absolute;
+    left: 0;
+    top: 3px;
+    font-size: 1.1em;
+}
+#pricing .premium-services li::before {
+    color: #FFD700; /* Gold for premium features checks */
+}
+#pricing .highlight-plan {
+    border: 2px solid #FFD700; /* Gold border */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.25); /* Gold glow */
+}
+#pricing .highlight-plan h3 {
+    color: #B8860B; /* Darker Gold for highlighted plan title */
+}
+
+#call-to-action {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e6f2f2; /* Light Teal */
+    border-radius: 6px;
+    margin-top: 35px;
+}
+#call-to-action h2 {
+    color: #008080; /* Teal */
+}
+#call-to-action p {
+    color: #333;
+    font-size: 1.1em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#call-to-action button {
+    margin: 10px;
+}
+/* Specific button for CTA if needed, otherwise default button style applies */
+#call-to-action button.primary-cta {
+    background-color: #008080; /* Teal */
+    color: white;
+    border-color: #006666;
+}
+#call-to-action button.primary-cta:hover {
+    background-color: #006666;
+    border-color: #005050;
+}
+
+
+/* Responsive Adjustments - New Style */
+@media (max-width: 992px) {
+    h1 { font-size: 2.4em; }
+    #hero-banner h1 { font-size: 2.8em; }
+    #hero-banner p { font-size: 1.15em; }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    header .container {
+        flex-direction: column;
+        align-items: center; /* Center logo and nav */
+    }
+    .logo { margin-bottom: 15px; }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 12px;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a::after { left: 50%; transform: translateX(-50%); } /* Center underline */
+    nav ul li a:hover::after, nav ul li a.active::after { width: 60%; } /* Shorter underline for stacked nav */
+
+
+    h1 { font-size: 2em; }
+    #hero-banner h1 { font-size: 2.3em; }
+    #hero-banner p { font-size: 1.1em; }
+
+    #core-features {
+        grid-template-columns: 1fr; /* Stack features */
+    }
+    .feature-item { text-align: center; } /* Center content in stacked features */
+    .feature-item i { margin-left: auto; margin-right: auto; } /* Center icon */
+
+    #template-cards {
+        grid-template-columns: 1fr; /* Stack cards */
+    }
+    .template-card .cta-button { align-self: center; } /* Center button in card */
+}
+
+@media (max-width: 480px) {
+    body { font-size: 15px; }
+    h1 { font-size: 1.8em; }
+    #hero-banner { padding: 60px 15px; }
+    #hero-banner h1 { font-size: 2em; }
+    #hero-banner p { font-size: 1em; }
+    button, .button-style { padding: 10px 20px; font-size: 0.95em; }
+    input[type="text"], input[type="search"], input[type="email"], textarea { padding: 12px; }
+}
+
+/* css/style.css - 新增样式 */
+
+/* Logo Image Styling */
+.logo img {
+    display: block; /* Removes extra space below image */
+    max-height: 45px; /* Adjust as needed */
+    width: auto;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    padding-top: 60px; /* Location of the box */
+}
+
+.modal-content {
+    background-color: #FDFEFE;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 30px;
+    border: 1px solid #ccc;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Maximum width */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #FFD700; /* Gold on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #008080; /* Dark Teal */
+}
+.modal-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5em;
+}
+.modal-content ul li {
+    margin-bottom: 0.8em;
+    color: #333;
+}
+.modal-content ul li i {
+    color: #008080; /* Dark Teal for check icon */
+    margin-right: 10px;
+}
+
+/* Feature Description Area Styles */
+#feature-description-area {
+    background-color: #e6f2f2; /* Very Light Teal */
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 6px;
+    border-left: 5px solid #FFD700; /* Gold accent */
+    transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease, margin 0.5s ease;
+    overflow: hidden;
+}
+
+#feature-description-area.feature-description-hidden {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-width: 0; /* Hide border when hidden */
+}
+
+#feature-description-area p {
+    margin: 0;
+    color: #006666; /* Darker Teal for text */
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+/* Active state for feature items */
+.feature-item.active-feature {
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3); /* Gold shadow for active */
+    border-color: #FFD700;
+    transform: translateY(-5px);
+}
+.feature-item.active-feature i {
+    color: #FFD700 !important; /* Ensure gold color for icon on active */
+}
+
+/* css/style.css - 新增或调整 QA 页面样式 */
+
+/* Optional: Style for when AI is "thinking" or loading a response */
+#ai-response-bubble.loading-response #ai-response-text::after {
+    content: ' ...'; /* Simple text ellipsis for loading */
+    display: inline-block;
+    animation: typingDots 1.5s infinite;
+}
+
+#ai-response-bubble.loading-response #ai-response-text {
+    color: #777; /* Slightly faded text while loading */
+}
+
+
+@keyframes typingDots {
+    0%, 20% {
+        content: '.';
+    }
+    40% {
+        content: '..';
+    }
+    60%, 100% {
+        content: '...';
+    }
+}
+
+/* Ensure the response area is visible initially or after interaction */
+#response-area {
+    opacity: 1; /* Make sure it's visible */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* css/style.css - 新增或调整 Templates 页面样式 */
+
+/* Template Page Controls */
+.template-controls {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center; /* Center search bar */
+}
+
+.search-bar-container {
+    display: flex;
+    width: 100%;
+    max-width: 500px; /* Limit search bar width */
+}
+
+#search-templates-input {
+    flex-grow: 1;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.search-btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 12px 15px; /* Adjust padding for icon button */
+}
+.search-btn i {
+    font-size: 1.1em;
+}
+
+
+/* Template Categories adjustments if needed */
+#template-categories a.category-link {
+    /* Existing styles should work, ensure active state is distinct */
+}
+#template-categories a.category-link.active {
+    background-color: #008080; /* Dark Teal */
+    color: white;
+    border-color: #006666; /* Or #FFD700 for gold accent on active */
+    font-weight: bold;
+}
+
+/* Hidden class for template cards during filtering */
+.template-card.hidden-card {
+    display: none;
+}
+
+/* Template Fill Area Styles */
+#template-fill-area {
+    background-color: #f9f9f9; /* Lighter background for fill area */
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: opacity 0.4s ease, max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
+    overflow: hidden;
+}
+
+#template-fill-area.template-fill-area-hidden {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-width: 0;
+}
+
+#template-fill-area h3 {
+    color: #008080; /* Dark Teal */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+#fill-form-container .form-group {
+    margin-bottom: 20px;
+}
+#fill-form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+#fill-form-container input[type="text"],
+#fill-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+#fill-form-container textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#template-fill-area .button-style {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+#template-fill-area .secondary-btn {
+    background-color: #777;
+    border-color: #666;
+    color: white;
+}
+#template-fill-area .secondary-btn:hover {
+    background-color: #666;
+    border-color: #555;
+}
+
+/* Success Modal Specifics (if using the HTML modal) */
+#success-modal .modal-content {
+    /* Styles already exist for .modal and .modal-content,
+       Can add specific adjustments here if needed */
+}
+
+/* css/style.css - 新增或调整 How It Works & Pricing 页面样式 */
+
+/* How It Works - Step Hover Effect */
+.how-it-works-step {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Ensure li has properties that can be transformed, like background or border if needed for shadow */
+}
+
+.how-it-works-step:hover {
+    transform: scale(1.03); /* Magnify effect */
+    box-shadow: 0 5px 15px rgba(0, 128, 128, 0.1); /* Subtle teal shadow */
+    /* You might want to adjust padding or margin slightly on hover if scale causes layout shifts */
+}
+
+/* Pricing Section - Card Hover Effect */
+.pricing-grid { /* Using grid for pricing cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pricing-card { /* Applied to .pricing-section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Lift and slightly magnify */
+    box-shadow: 0 10px 25px rgba(0, 128, 128, 0.15); /* Enhanced teal shadow */
+}
+
+/* Notification Modal Styles (Generic) */
+#notification-modal .modal-content {
+    /* Existing modal styles apply, can add specific overrides */
+}
+#notification-modal-icon i { /* For Font Awesome icons */
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+#notification-modal-icon .success-icon { color: #28a745; } /* Green for success */
+#notification-modal-icon .info-icon { color: #17a2b8; } /* Blue for info/confirmation */
+#notification-modal-icon .warning-icon { color: #ffc107; } /* Yellow for warning */
+
+#notification-modal-actions .button-style {
+    margin: 10px 5px 0 5px;
+}
+/* Specific styles for confirm/cancel buttons in modal */
+#notification-modal-actions .confirm-btn {
+    background-color: #008080; /* Teal */
+    color: white;
+    border-color: #006666;
+}
+#notification-modal-actions .confirm-btn:hover {
+    background-color: #006666;
+}
+#notification-modal-actions .cancel-btn {
+    background-color: #777;
+    color: white;
+    border-color: #666;
+}
+#notification-modal-actions .cancel-btn:hover {
+    background-color: #666;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>首页</title>
+</head>
+<body>
+       <header>
+           <div class="container header-container">
+               <div class="logo">
+                   <a href="index.html">
+                       <!-- 您的Logo图片 -->
+                       <img src="./img/logo.jpg" alt="LegalEase Logo">
+                   </a>
+               </div>
+                           <nav class="main-navigation">
+                                  <ul>
+                                      <li><a href="index.html">Home</a></li>
+                                      <li><a href="question and answer.html">Q&A</a></li>
+                                      <li><a href="template.html">Templates</a></li>
+                                      <li><a href="working principle.html">How It Works & Pricing</a></li>
+                                      <li><a href="#">Login</a></li>
+                                  </ul>
+                              </nav>
+                              <div class="header-search-area">
+                              </div>
+                          </div>
+                      </header>
+               
+                   <main>
+                       <section id="hero-banner">
+                           <h1>AI-Powered Legal Support for Small Businesses</h1>
+                           <p>Fast, affordable, and reliable legal help in minutes.</p>
+                           <button type="button" id="open-modal-btn">[Get Started]</button>
+                       </section>
+               
+                       <div class="container">
+                           <section id="core-features">
+                               <div class="feature-item" data-feature="qa">
+                                   <i class="fas fa-gavel fa-2x icon-interactive"></i>
+                                   <h3>AI Legal Q&A</h3>
+                                   <p>Get instant intelligent answers to your legal questions, available 24/7.</p>
+                               </div>
+                               <div class="feature-item" data-feature="generator">
+                                   <i class="fas fa-file-signature fa-2x icon-interactive"></i>
+                                   <h3>Auto Contract Generator</h3>
+                                   <p>Easily create professional legal contract texts tailored to your specific needs.</p>
+                               </div>
+                               <div class="feature-item" data-feature="reminders">
+                                   <i class="fas fa-bell fa-2x icon-interactive"></i>
+                                   <h3>Compliance Reminders</h3>
+                                   <p>Stay informed about important legal compliance updates to avoid potential risks.</p>
+                               </div>
+                           </section>
+               
+                           <!-- Area to display core feature descriptions -->
+                           <section id="feature-description-area" class="feature-description-hidden">
+                               <p id="feature-description-text"></p>
+                           </section>
+               
+                           <section id="quote-section">
+                               <blockquote>
+                                   <p>"You focus on your business, we handle the legal matters."</p>
+                               </blockquote>
+                           </section>
+                       </div>
+                   </main>
+               
+                   <footer>
+                       <div class="container">
+                           <p><a href="#">About Us</a> | <a href="#">Contact</a> | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+                           <p>© LegalEase 2025 - All rights reserved</p>
+                       </div>
+                   </footer>
+               
+                   <!-- Modal Pop-up -->
+                   <div id="info-modal" class="modal">
+                       <div class="modal-content">
+                           <span class="close-btn">×</span>
+                           <h2>Welcome to LegalEase!</h2>
+                           <p>We are dedicated to providing convenient and intelligent legal services for small businesses.</p>
+                           <ul>
+                               <li><i class="fas fa-check-circle"></i> AI-Powered Legal Q&A</li>
+                               <li><i class="fas fa-check-circle"></i> Automated Contract Generation</li>
+                               <li><i class="fas fa-check-circle"></i> Real-time Compliance Reminders</li>
+                           </ul>
+                           <p>Click the buttons below to explore more features or start your experience now!</p>
+                           <a href="how-it-works-pricing.html" class="button-style" style="margin-right: 10px;">Learn More</a>
+                           <a href="templates.html" class="button-style">[Choose Contract Template]</a>
+                       </div>
+                   </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
